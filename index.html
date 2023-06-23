@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b7d3a69eca.js" crossorigin="anonymous"></script>
+    <!-- email integration scripfrom emailJS -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("CqJTqRzo-Ob3vbNV3");
+})();
+</script>
     <title>Pau Mnc</title>
 </head>
 <body>
@@ -17,8 +26,8 @@
             <ul class="nav__link--list">
                 <li class="nav__link "><a href="#" class="nav__link--anchor link__hover--effect link__hover--effect-black">About</a> </li>
                 <li class="nav__link "><a href="#" class="nav__link--anchor link__hover--effect link__hover--effect-black">Portfolio</a> </li>
-                <li class="nav__link "><a href="#" class="nav__link--anchor link__hover--effect link__hover--effect-black">Contact</a> </li>
-                <li class="nav__link click"><a href="#" class="nav__link--anchor link__hover--effect link__hover--effect-black"><i class="fa-solid fa-circle-half-stroke"></i></a> </li>
+                <li class="nav__link" onclick="toggleModal()"><a href="#" class="nav__link--anchor link__hover--effect link__hover--effect-black">Contact</a> </li>
+                <li class="nav__link click" onclick="toggleContrast()"><a href="#" class="nav__link--anchor link__hover--effect link__hover--effect-black"><i class="fa-solid fa-circle-half-stroke"></i></a> </li>
             </ul>
         </nav>
 
@@ -28,7 +37,7 @@
                 <h1 class="title color">I'm Pau.</h1>
                 <p class="header__para">
                     I'm a <b class="color">Frontend Software Engineer </b> with a strong passion for building web applications with great user experiences.<br>
-                    Here's a bit more <b class="color">about me.</b> 
+                    Here's a bit more <b class="color click" onclick="toggleModal()">about me.</b> 
                 </p>
                 <div class="social__list">
                     <a href="#"  target="_blank"  class="social__link click"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -37,7 +46,7 @@
                 </div>
             </div>
         </header>
-        <button class="mail_btn click"> 
+        <button class="mail_btn click" onclick="toggleModal()"> 
             <i class="fa-regular fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -74,34 +83,26 @@
 
 
             <div class="modal__half modal__contact">
+                <i class="fa-regular fa-circle-xmark modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">
                     Leave me a message 
                 </h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">
                     Currently, I'm open to new opportunities.
                 </h4>
-                <form action="" id="contact__form">
+                <form onsubmit="contact(event)" id="contact__form">
                     <div class="form__item">
-                        <!-- <label class="form__item--label">Name</label> -->
                         <input type="text" name="user_name" class="input" placeholder="Your Name"></input>
                     </div>
-                </form>
-                <form action="" id="contact__form">
                     <div class="form__item">
-                        <!-- <label  class="form__item--label">Email</label> -->
-                        <input type="email" name="user_email" class="input" placeholder="Your Email" required></input>
+
+                        <input type="email" name="user_email" class="input" placeholder="Your Email"></input>
                     </div>
-                </form>
-                <form action="" id="contact__form">
                     <div class="form__item">
-                        <!-- <label  class="form__item--label">Website</label> -->
                         <input type="website" name="user_website" class="input" placeholder="Your Website (if exist)"></input>
                     </div>
-                </form>
-                <form action="" id="contact__form">
                     <div class="form__item">
-                        <!-- <label class="form__item--label">Message</label> -->
-                        <textarea type="text" name="message" class="input" placeholder="Brief message" required></textarea>
+                        <textarea type="text" name="message" class="input" placeholder="Brief message"></textarea>
                     </div>
                     <div class="button__submit">
                         <button id="contact__submit" class="form__submit">Shoot a message
@@ -110,6 +111,9 @@
                 </form> 
                 <div class="modal__overlay modal__overlay--loading">
                     <i class="fa-solid fa-hurricane"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon!
                 </div>
             </div>
         </div>
@@ -217,5 +221,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
