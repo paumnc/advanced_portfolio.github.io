@@ -82,23 +82,35 @@
                 </h4>
                 <form action="" id="contact__form">
                     <div class="form__item">
-                        <label class="form__item--label">Name</label>
-                        <input type="text" name="user_name" class="input" required></input>
+                        <!-- <label class="form__item--label">Name</label> -->
+                        <input type="text" name="user_name" class="input" placeholder="Your Name"></input>
                     </div>
                 </form>
                 <form action="" id="contact__form">
                     <div class="form__item">
-                        <label  class="form__item--label">Email</label>
-                        <input type="email" name="user_email" class="input" required></input>
+                        <!-- <label  class="form__item--label">Email</label> -->
+                        <input type="email" name="user_email" class="input" placeholder="Your Email" required></input>
                     </div>
                 </form>
                 <form action="" id="contact__form">
                     <div class="form__item">
-                        <label class="form__item--label">Message</label>
-                        <textarea type="text" name="message" class="input" required></textarea>
+                        <!-- <label  class="form__item--label">Website</label> -->
+                        <input type="website" name="user_website" class="input" placeholder="Your Website (if exist)"></input>
                     </div>
-                    <button id="contact__submit" class="form__submit">Send</button>
+                </form>
+                <form action="" id="contact__form">
+                    <div class="form__item">
+                        <!-- <label class="form__item--label">Message</label> -->
+                        <textarea type="text" name="message" class="input" placeholder="Brief message" required></textarea>
+                    </div>
+                    <div class="button__submit">
+                        <button id="contact__submit" class="form__submit">Shoot a message
+                        </button>
+                    </div>     
                 </form> 
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fa-solid fa-hurricane"></i>
+                </div>
             </div>
         </div>
     </section>
