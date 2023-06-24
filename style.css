@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
-    background-color: ;
 }
 
 ::selection {
@@ -159,13 +159,6 @@ nav, .scroll, .header {
     background: #242424;
 }
 
-.dark-theme #personal-logo {
-    filter: grayscale(1) invert(1);
-}
-
-.dark-theme .scroll__icon {
-    border-color: #fff;
-}
 
 .dark-theme .mail_btn {
     background-color: #fff;
@@ -297,8 +290,8 @@ nav {
 }
 
 #personal-logo {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
 }
 
 .nav__link {
@@ -306,9 +299,9 @@ nav {
 }
 
 .nav__link--anchor {
-    font-size: 16px;
+    font-size: 18px;
     color: #242424;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .fa-circle-half-stroke {
@@ -438,6 +431,7 @@ transform: translateX(-110%);
     box-shadow: 6px 6px 0 #ffffff;
     transform: translate(-4px,-4px);
 }
+
 .form__submit:active {
     background-color: #242424;
 }
@@ -610,7 +604,6 @@ footer {
 .footer__logo--img {
     width: 70px;
     /* height: 80px; */
-    filter: grayscale(1) invert(1);
 
 }
 
