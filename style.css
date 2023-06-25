@@ -82,7 +82,6 @@ textarea {
 label {
     font-size: 14px;
     font-weight: bold;
-
 }
 
 p {
@@ -172,13 +171,13 @@ nav, .scroll, .header {
     transition: all 400ms;
 }
 
-.dark-theme .title, .dark-theme .section__title, .dark-theme .section__sub-title, .dark-theme .fa-circle-half-stroke, .dark-theme .header__para {
+.dark-theme .title, .dark-theme .section__title, .dark-theme .section__sub-title, .dark-theme .fa-circle-half-stroke, .dark-theme .header__para, .dark-theme .project__description, .dark-theme .project__description--link {
     color:  #f9f6ee;
 }  
  .dark-theme .link__hover--effect-black:after, .dark-theme .scroll__icon::after {
     background:  #f9f6ee;
 } 
-.dark-theme section {
+.dark-theme section, .dark-theme .project__wrapper--bg {
     background: #242424;
 }
 .dark-theme .scroll__icon, .dark-theme .border{
@@ -189,6 +188,14 @@ nav, .scroll, .header {
     background-color:  #f9f6ee;
     color: #242424;
 }
+
+.dark-theme .project__wrapper {
+    background: rgba(36, 36, 36, 0.5);
+}
+
+
+
+
 
 /*
 
@@ -532,7 +539,9 @@ text-align: right;
 PROJECTS
 
 */
-
+.projects {
+   position: relative;
+}
 .section__title {
     text-align: center;
     font-size: 48px;
@@ -561,7 +570,7 @@ PROJECTS
 .project__wrapper {
     position: relative;
     border-radius: 20px;
-    box-shadow: 0 20px 80px 0 (rgb(17, 15, 15, 0.5));
+    box-shadow: 0 20px 80px 0 (rgba(249, 246, 238, 0.5));
     overflow: hidden;
 }
 
@@ -586,7 +595,7 @@ PROJECTS
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 300ms, transform 450ms ease;
-    color:  #f9f6ee;
+    color:  #242424;
     max-width: 600px;
     
 }
@@ -597,7 +606,7 @@ PROJECTS
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #1c1d25;
+    background-color: #f9f6ee;
     opacity: 0;
 }
 
@@ -610,7 +619,7 @@ PROJECTS
 }
 
 .project__description--link {
-    color:  #f9f6ee;
+    color:  #242424;
     font-size: 20px;
     margin-right: 16px;
 }
@@ -718,8 +727,9 @@ width = 80vw
 
 .shape {
     position: fixed;
-    max-width: 50px;
+    max-width: 15px;
 }
+
 
 /*
 
@@ -753,9 +763,12 @@ Small phones, tablets, large smart phones
     .project__description--sub-title {
         font-size: 16px;
     }
+    .project__description--para {
+        font-size: 12px;
+    }
     .project__description {
         left: 0;
-        padding: 0;
+        padding: 0 12px;
         width: 100%;
         text-align: center;
     }
