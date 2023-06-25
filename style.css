@@ -118,6 +118,19 @@ p {
     padding: 0px 12px;
 }
 
+.yellow {
+    background-color: #FFe2a1;
+    border-radius: 50px;
+    padding: 0px 12px;
+    font-style: italic;
+}
+
+.orange {
+    background: #edb788;
+    border-radius: 50px;
+    padding: 0px 12px;
+}
+
 .link__hover--effect {
     position: relative;
 }
@@ -168,7 +181,7 @@ nav, .scroll, .header {
 .dark-theme section {
     background: #242424;
 }
-.dark-theme .scroll__icon {
+.dark-theme .scroll__icon, .dark-theme .border{
     border-color:  #f9f6ee;
 }
 
@@ -300,8 +313,12 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+
 }
 
+.border {
+    border-top: 2px solid #242424;
+}
 .nav__link--list {
     display: flex;
     align-items: center;
@@ -437,7 +454,7 @@ transform: translateX(-110%);
 
 .form__submit {
     color:  #f9f6ee;
-    background-color: #80A7BF;
+    background-color: #a1b281;
     padding: 8px 12px;
     border: 1px solid  #f9f6ee;
     border-radius: 20px;
@@ -445,11 +462,11 @@ transform: translateX(-110%);
     transition: all 300ms ease;
 }
 
-
+/* 
 .form__submit:hover {
     box-shadow: 6px 6px 0  #f9f6ee;
     transform: translate(-4px,-4px);
-}
+} */
 
 .form__submit:active {
     background-color: #242424;
@@ -470,7 +487,7 @@ text-align: right;
     height: 100%;
 }
 .modal__overlay--loading {
-    background-color: #D9A273;
+    background-color:  #FFD985;
     font-size: 80px;
     z-index: -1;
 }
@@ -489,7 +506,7 @@ text-align: right;
 }
 
 .modal__overlay--success {
-    background: #80A7BF;
+    background:  #D9A273;
     font-size: 40px;
     text-align: center;
     padding: 28px;
